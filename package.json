@@ -1,0 +1,33 @@
+{
+  "name": "node-red-contrib-orvibo",
+  "version": "0.0.0",
+  "description": "Node-Red nodes to wrap the node-orvibo module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predev": "npm i -g",
+    "dev": "node-red -v"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephenkeep/node-red-contrib-orvibo.git"
+  },
+  "keywords": [
+    "node-red",
+    "orvibo"
+  ],
+  "author": "Stephen Keep",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stephenkeep/node-red-contrib-orvibo/issues"
+  },
+  "homepage": "https://github.com/stephenkeep/node-red-contrib-orvibo#readme",
+  "node-red": {
+    "nodes": {
+      "Orvibo": "orvibo.js"
+    }
+  },
+  "dependencies": {
+    "node-orvibo": "^1.1.0"
+  }
+}
