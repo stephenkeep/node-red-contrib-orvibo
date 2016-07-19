@@ -1,9 +1,20 @@
 # Orvibo Node for NodeRED
 
-A simple node that listens for when an Amazon Dash button is pressed.
+A simple node that can control the Orvibo S20 state.
 
-## Installation
+To change the state of a device send the node a payload of:
 
-    # dependancy on libpcap for reading packets
-    $ sudo apt-get install libpcap-dev
-    npm install node-red-contrib-amazondash
+```
+    { 
+        macAddress: 'MAC ADDRESS',
+        macPadding: '202020202020',
+        type: 'Socket',
+        ip: 'IP ADDRESS',
+        state: false,
+        name: 'Socket MAC ADDRESS' };
+
+```
+
+For more information on how to obtain these settings see here:
+
+[https://nathan.chantrell.net/20160101/orvibo-s20-wifi-mains-socket-with-node-red/](https://nathan.chantrell.net/20160101/orvibo-s20-wifi-mains-socket-with-node-red/)
