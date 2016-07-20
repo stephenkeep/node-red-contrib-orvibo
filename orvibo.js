@@ -3,7 +3,6 @@ var o = new Orvibo();
 
 var timer1 // This timer is used for discovering devices
 var timer2 = [] // This timer is used to subscribe to a device
-var timer3 = [] // This timer is used to resubscribe a device
 
 // We've listened, and now we're ready to go.
 o.on("ready", function() {
@@ -31,7 +30,7 @@ o.on("deviceadded", function(device) {
 o.on("subscribed", function(device) {
 
     clearInterval(timer2[device.macAddress]) // Stop the second subscribe timer for this device
-    timer3[device.macAddress] = setInterval(function() { // Set up another timer, this time for querying
+    timer2[device.macAddress] = setInterval(function() { // Set up another timer, this time for querying
         
         o.subscribe(device)
         
